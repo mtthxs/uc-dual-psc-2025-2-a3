@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity"
+            stylesheets="@../../../css/main.css"
+            xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="view.ui.user.UserViewImpl">
+
+    <VBox spacing="20" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <!-- Header row with title and New User button -->
+        <HBox alignment="BASELINE_RIGHT" spacing="20">
+            <Label styleClass="dashboard-title" text="Users">
+                <HBox.margin>
+                    <Insets top="16.0"/>
+                </HBox.margin>
+            </Label>
+
+            <Region HBox.hgrow="ALWAYS"/> <!-- Spacer -->
+
+            <StackPane alignment="CENTER_LEFT">
+                <Button fx:id="newUserButton" styleClass="btn-primary" text="New User"/>
+                <StackPane.margin>
+                    <Insets top="24.0"/>
+                </StackPane.margin>
+            </StackPane>
+        </HBox>
+
+        <!-- Grid to display user cards dynamically -->
+        <GridPane fx:id="userGrid" hgap="20" vgap="20" VBox.vgrow="ALWAYS"/>
+
+        <!-- Footer info -->
+        <HBox spacing="20" styleClass="project-footer">
+            <Label styleClass="project-footer-label" text="Select a user to view details">
+                <padding>
+                    <Insets bottom="15.0"/>
+                </padding>
+            </Label>
+        </HBox>
+
+        <!-- Overall padding -->
+        <padding>
+            <Insets left="30.0" right="30.0"/>
+        </padding>
+    </VBox>
+</AnchorPane>
+
