@@ -11,6 +11,12 @@ Project management system developed in Java using the MVP (Model-View-Presenter)
 * Maven (or Gradle, depending on project configuration)
 * **MVP** architectural pattern
 
+# Images
+
+<img width="604" height="430" alt="image" src="https://github.com/user-attachments/assets/f1109a71-81a5-4c88-b273-520b49e471c9" />
+
+<img width="1075" height="636" alt="image" src="https://github.com/user-attachments/assets/b7a016b9-c5ff-4ac7-b599-0dd5b787c2d8" />
+
 # Main Features
 
 * Dashboard with counts of **users**, **projects**, and **teams**
