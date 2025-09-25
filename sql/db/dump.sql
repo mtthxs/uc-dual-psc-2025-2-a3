@@ -67,10 +67,10 @@ CREATE TABLE IF NOT EXISTS project_teams (
 -- -------------------------------
 INSERT INTO users (full_name, cpf, email, login, password, role)
 VALUES 
-('Administrator', '000.000.000-00', 'admin@example.com', 'admin', '1234', 'ADMINISTRATOR'),
-('John Manager', '111.111.111-11', 'john.manager@example.com', 'jmanager', 'abcd', 'MANAGER'),
-('Alice Collaborator', '222.222.222-22', 'alice.collab@example.com', 'acollab', 'pass', 'COLLABORATOR'),
-('Bob Collaborator', '333.333.333-33', 'bob.collab@example.com', 'bcollab', 'pass', 'COLLABORATOR');
+('User 1', '000.000.000-01', 'user1@example.com', 'user1', '$2a$12$qS1LaodYXxEMOOmSE6E1c.UW0c.U2/KwF.iB6Mk1uSMkTKMYZO7b2', 'ADMINISTRATOR'),
+('John Manager', '111.111.111-11', 'john.manager@example.com', 'jmanager', '$2a$12$qS1LaodYXxEMOOmSE6E1c.UW0c.U2/KwF.iB6Mk1uSMkTKMYZO7b2', 'MANAGER'),
+('Alice Collaborator', '222.222.222-22', 'alice.collab@example.com', 'acollab', '$2a$12$qS1LaodYXxEMOOmSE6E1c.UW0c.U2/KwF.iB6Mk1uSMkTKMYZO7b2', 'COLLABORATOR'),
+('Bob Collaborator', '333.333.333-33', 'bob.collab@example.com', 'bcollab', '$2a$12$qS1LaodYXxEMOOmSE6E1c.UW0c.U2/KwF.iB6Mk1uSMkTKMYZO7b2', 'COLLABORATOR');
 
 -- -------------------------------
 -- Insert Teams
