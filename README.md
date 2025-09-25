@@ -1,6 +1,8 @@
 # Project Management System (MVP)
 
-Project management system developed in Java using the MVP (Model-View-Presenter) pattern with a JavaFX graphical interface. This project is a functional MVP and includes database scripts, as well as Docker configuration to facilitate execution.
+Project management system developed in Java using the MVP (Model-View-Presenter) pattern with a JavaFX graphical
+interface. This project is a functional MVP and includes database scripts, as well as Docker configuration to facilitate
+execution.
 
 # Technologies Used
 
@@ -31,17 +33,22 @@ The project is organized into the following packages for clarity and maintainabi
 
 * **enums**: Contains enumeration classes such as `ProjectStatus` and `UserRole`.
 * **factory**:
-  - **project**: Includes `ProjectAddScreenFactory` and `ProjectDetailsScreenFactory` for creating project-related screens.
-  - **team**: Includes `TeamAddScreenFactory` and `TeamDetailsScreenFactory` for team-related screens.
-  - **user**: Includes `UserAddScreenFactory` and `UserDetailsScreenFactory` for user-related screens.
+    - **project**: Includes `ProjectAddScreenFactory` and `ProjectDetailsScreenFactory` for creating project-related
+      screens.
+    - **team**: Includes `TeamAddScreenFactory` and `TeamDetailsScreenFactory` for team-related screens.
+    - **user**: Includes `UserAddScreenFactory` and `UserDetailsScreenFactory` for user-related screens.
 * **model**: Defines entity classes (`Project`, `Team`, `User`).
 * **presenter**: Handles business logic intermediaries.
 * **repository**: Manages data access with classes such as `ProjectRepository`, `TeamRepository`, and `UserRepository`.
 * **util**: Utility classes including `DBConnection`, `Logger`, `NavigationService`, `Session`, and `Utils`.
 * **view**:
-  - **interfaces**: Defines view interfaces.
+    - **interfaces**: Defines view interfaces.
 
 # Running the Project
+
+## Users
+
+Default password: pass123
 
 ## 1. Configure the Database
 
