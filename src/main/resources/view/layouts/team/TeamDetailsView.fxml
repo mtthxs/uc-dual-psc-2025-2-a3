@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Main container for Team Details screen -->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<VBox prefHeight="450.0" prefWidth="600.0" spacing="0" xmlns="http://javafx.com/javafx/24.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ui.team.TeamDetailsViewImpl">
+
+    <!-- Header bar -->
+    <StackPane minHeight="70.0" prefHeight="70.0" style="-fx-background-color: #0672cf;">
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25px; -fx-fill: white;"
+              text="Team Details"/>
+    </StackPane>
+
+    <!-- Details Grid -->
+    <GridPane hgap="10" vgap="15">
+        <padding>
+            <Insets bottom="20" left="20" right="20" top="20"/>
+        </padding>
+
+        <columnConstraints>
+            <!-- Label column -->
+            <ColumnConstraints percentWidth="30"/>
+            <!-- Field column -->
+            <ColumnConstraints percentWidth="70"/>
+        </columnConstraints>
+
+        <!-- Team Name -->
+        <Label text="Team Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label fx:id="teamNameLabel" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <!-- Description -->
+        <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Label fx:id="descriptionLabel" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <!-- Members List -->
+        <Label text="Members:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <ListView fx:id="membersListView" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <!-- Projects List -->
+        <Label text="Projects:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <ListView fx:id="projectsListView" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <rowConstraints>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+        </rowConstraints>
+    </GridPane>
+
+    <!-- Footer: Close button -->
+    <HBox alignment="CENTER_RIGHT" spacing="10">
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10"/>
+        </padding>
+        <Button fx:id="closeButton" text="Close"/>
+    </HBox>
+</VBox>

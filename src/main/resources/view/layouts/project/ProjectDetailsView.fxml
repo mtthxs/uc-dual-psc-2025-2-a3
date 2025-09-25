@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Main container for Project Details view -->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<VBox xmlns="http://javafx.com/javafx/24.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="view.ui.project.ProjectDetailsViewImpl"
+      spacing="10"
+      prefHeight="540.0" prefWidth="600.0">
+
+    <!-- Header section -->
+    <StackPane minHeight="70.0" prefHeight="70.0" style="-fx-background-color: #0672cf;">
+        <Text text="Project Details" style="-fx-font-size: 25px; -fx-fill: white;"/>
+    </StackPane>
+
+    <!-- Project details grid -->
+    <GridPane hgap="10" vgap="15">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <!-- Column layout: labels 30%, values 70% -->
+        <columnConstraints>
+            <ColumnConstraints percentWidth="30"/>
+            <ColumnConstraints percentWidth="70"/>
+        </columnConstraints>
+
+        <!-- Project Name -->
+        <Label text="Project Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="nameLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <!-- Description -->
+        <Label text="Description:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="descriptionLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <!-- Start Date -->
+        <Label text="Start Date:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="startDateLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <!-- End Date -->
+        <Label text="End Date:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Label fx:id="endDateLabel" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <!-- Status -->
+        <Label text="Status:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <Label fx:id="statusLabel" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <!-- Manager -->
+        <Label text="Manager:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <Label fx:id="managerLabel" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <!-- Progress Bar -->
+        <Label text="Progress:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <ProgressBar fx:id="progressBar" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+        <!-- Teams involved in the project -->
+        <Label text="Teams:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <ListView fx:id="teamsListView" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <!-- Action buttons -->
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+        <Button text="Close" fx:id="closeButton"/> <!-- Closes the details view -->
+    </HBox>
+</VBox>

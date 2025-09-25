@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Main container for Team Registration screen -->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<VBox prefHeight="450.0" prefWidth="600.0" spacing="0" xmlns="http://javafx.com/javafx/24.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ui.team.TeamAddViewImpl">
+
+    <!-- Header bar -->
+    <StackPane minHeight="70.0" prefHeight="70.0" style="-fx-background-color: #0672cf;">
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25px; -fx-fill: white;"
+              text="Team Registration"/>
+    </StackPane>
+
+    <!-- Scrollable content area -->
+    <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+        <VBox spacing="20">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20"/>
+            </padding>
+
+            <!-- Form grid -->
+            <GridPane hgap="10" vgap="15">
+                <columnConstraints>
+                    <!-- Labels column -->
+                    <ColumnConstraints percentWidth="30"/>
+                    <!-- Input fields column -->
+                    <ColumnConstraints percentWidth="70"/>
+                </columnConstraints>
+
+                <!-- Team Name -->
+                <Label text="Team Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="teamNameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <!-- Description -->
+                <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextArea fx:id="descriptionField" prefRowCount="3" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <!-- Members List -->
+                <Label text="Members:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <ListView fx:id="membersListView" prefHeight="120" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                <!-- Projects List -->
+                <Label text="Projects:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                <ListView fx:id="projectsListView" prefHeight="120" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                <rowConstraints>
+                    <!-- Four rows for each form field -->
+                    <RowConstraints/>
+                    <RowConstraints/>
+                    <RowConstraints/>
+                    <RowConstraints/>
+                </rowConstraints>
+            </GridPane>
+
+            <!-- Footer buttons -->
+            <HBox alignment="CENTER_RIGHT" spacing="10">
+                <Button fx:id="cancelButton" text="Cancel"/>
+                <Button fx:id="saveButton" text="Save"/>
+            </HBox>
+        </VBox>
+    </ScrollPane>
+</VBox>

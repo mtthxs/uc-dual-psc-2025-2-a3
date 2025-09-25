@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<Pane prefHeight="177.0" prefWidth="211.0" style="-fx-background-color: #000;"
+      xmlns="http://javafx.com/javafx/24.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="view.ui.user.UserHeaderViewImpl">
+
+    <!-- Welcome message -->
+    <Label fx:id="welcomeLabel"
+           layoutX="23.0" layoutY="80.0"
+           style="-fx-text-fill: white; -fx-font-size: 19px;"/>
+
+    <!-- User name -->
+    <Label fx:id="nameLabel"
+           layoutX="23.0" layoutY="113.0"
+           style="-fx-text-fill: white; -fx-font-size: 16px; -fx-opacity: 0.9;"/>
+
+    <!-- User role -->
+    <Label fx:id="roleLabel"
+           layoutX="23.0" layoutY="143.0"
+           style="-fx-text-fill: white; -fx-font-size: 14px; -fx-opacity: 0.5;"/>
+
+    <!-- Avatar section -->
+    <StackPane layoutX="23.0" layoutY="8.0" prefHeight="64" prefWidth="64">
+        <!-- Placeholder circle if no avatar -->
+        <Circle fx:id="avatarPlaceholder" fill="#555555" radius="32"/>
+        <!-- User avatar image -->
+        <ImageView fx:id="avatarImage" fitHeight="64.0" fitWidth="64.0"
+                   pickOnBounds="true" preserveRatio="true"/>
+    </StackPane>
+</Pane>
+
